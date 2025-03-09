@@ -1,0 +1,22 @@
+{
+  "name": "db",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/db/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project db --web",
+  "targets": {
+    "generate-client": {
+      "command": "prisma generate",
+      "dependsOn": [],
+      "inputs": ["{projectRoot}/prisma/schema.prisma"],
+      "outputs": [
+        "{workspaceRoot}/node_modules/@nx-for-code-gen/prisma/api-db"
+      ],
+      "cache": true,
+      "options": {
+        "cwd": "libs/db"
+      }
+    }
+  }
+}
